@@ -1,6 +1,8 @@
 #include "tcp_client.h"
 #include "ui_tcp_client.h"
 
+#include <QTextCodec>
+
 Tcp_Client::Tcp_Client(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Tcp_Client)
