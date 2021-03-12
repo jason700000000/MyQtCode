@@ -1,8 +1,11 @@
-#include "mainwindow.h"
+﻿#include "mainwindow.h"
 #include "ui_mainwindow.h"
 
 #include "tcp_server.h"
 #include "tcp_client.h"
+#include "tcpserver.h"
+#include "tcpclient.h"
+#include "app.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -13,6 +16,8 @@ MainWindow::MainWindow(QWidget *parent)
     //绑定菜单单击事件
     connect(ui->actionServer,&QAction::triggered,this,&MainWindow::onCreateTcpServer);
     connect(ui->actionClient,&QAction::triggered,this,&MainWindow::onCreateTcpClient);
+
+    App::writeConfig();
 
 }
 

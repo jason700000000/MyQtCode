@@ -32,6 +32,9 @@ private:
     Ui::Tcp_Server *ui;
     QTcpServer *server;
     QTcpSocket *socket;
+
+    //存储客户端socket <IP地址，socket指针>
+    QMap<QString,QTcpSocket*> map_socket;
 };
 
 #endif // TCP_SERVER_H
